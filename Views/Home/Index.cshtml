@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model IEnumerable<string>
+
+@*simple home page*@
+<div class="text-center">
+    <h1>Top 5 Restaurants in Provo</h1>
+
+    <ul>
+        @foreach (string r in Model)
+        {
+            <li class="text-justify" style="list-style-type: none;">@Html.Raw(r)</li>
+            <br />
+        }
+    </ul>
+</div>

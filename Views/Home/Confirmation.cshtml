@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Confirmation";
+}
+
+@model Assignment4_DevynSmith_Section3.Models.AddSuggestionResponse
+
+@*confirmation page, with an if else to display different things depending on what comes up*@
+<div>
+    <img src="https://cdn.pixabay.com/photo/2020/03/03/09/57/city-buildings-4898207__340.png" />
+    <br />
+    <h1>Your restaurant, @Model.Name submitted successfully!</h1>
+    <br />
+    <h3>Happy eating!</h3>
+</div>
+
+<br />
+
+<div>
+    <a asp-action="RestaurantList">Click here</a> to see the list of restaurants you've added
+</div>

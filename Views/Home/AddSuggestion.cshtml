@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Add Restaurants";
+}
+
+@model Assignment4_DevynSmith_Section3.Models.AddSuggestionResponse
+
+@*form that has all inputs and submit button*@
+<form asp-action="AddSuggestion" method="post">
+    <table>
+        <tr>
+            <th>
+                <label asp-for="Name">*Your Name:</label>
+            </th>
+            <td>
+                <input asp-for="Name" type="text" placeholder="Your name..." />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label asp-for="RestaurantName">*Restaurant Name:</label>
+
+            </th>
+            <td>
+                <input asp-for="RestaurantName" type="text" placeholder="Restaurant Name..." />
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label asp-for="FavoriteDish">&nbsp Favorite Dish:</label>
+            </th>
+            <td>
+                <input asp-for="FavoriteDish" type="text" default=null placeholder="Favorite Dish..." />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label asp-for="Phone">*Restaurant Phone:</label>
+            </th>
+            <td>
+                <input asp-for="Phone" type="text" placeholder="Restaurant Phone..." />
+            </td>
+        </tr>
+        <tr><th><br /></th></tr>
+        <tr>
+            <th>
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </th>
+        </tr>
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </table>
+</form>

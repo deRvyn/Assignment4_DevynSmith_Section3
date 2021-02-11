@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Restaurant List";
+}
+
+@model IEnumerable<Assignment4_DevynSmith_Section3.Models.AddSuggestionResponse>
+
+@*displays the movie collection that users enter in, as well as the spreadsheet given to us by Prof Hilton*@
+<div>
+    <h1>Top Restaurants</h1>
+    <br />
+    <h3>Entered Today:</h3>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Restaurant</th>
+                <th>Favorite Dish</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Assignment4_DevynSmith_Section3.Models.AddSuggestionResponse x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
